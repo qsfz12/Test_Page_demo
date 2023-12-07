@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Post</title>
     <!-- Import Font Awsome -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,12 +14,10 @@
             padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .icon {
             width: 30px;
             height: 30px;
         }
-
         .search-box {
             flex-grow: 1;
             margin: 0 20px;
@@ -29,7 +25,6 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
@@ -37,7 +32,6 @@
             padding: 0;
             color: #333;
         }
-
         .post-container {
             width: 80%;
             margin: 20px auto;
@@ -52,42 +46,35 @@
             padding: 15px;
             border-bottom: 1px solid #eee;
         }
-
         .profile-image {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-right: 15px;
         }
-
         .username {
             font-weight: 600;
             color: #333;
         }
-
         .post-body {
             display: flex;
             padding: 15px;
             border-bottom: 1px solid #eee;
         }
-
         .post-image {
             width: 60%;
             border-radius: 5px;
         }
-
         .comment-section {
             width: 100%;
             padding: 20px;
             background-color: #f9f9f9;
             border-top: 1px solid #eee;
         }
-
         .comment-box {
             display: flex;
             align-items: center;
         }
-
         .comment-box input {
             flex-grow: 1;
             padding: 10px;
@@ -95,7 +82,6 @@
             border-radius: 20px;
             margin-right: 8px;
         }
-
         .comment-box button {
             background-color: #4CAF50;
             color: white;
@@ -104,115 +90,93 @@
             border-radius: 20px;
             transition: background-color 0.3s;
         }
-
         .comment-box button:hover {
             background-color: #45a049;
         }
-
         button {
             cursor: pointer;
         }
-
         button:focus {
             outline: none;
         }
-
         .interaction-btn img {
             width: 20px;
             height: 20px;
         }
-
         .interaction-btn {
             background-color: transparent;
             border: none;
             padding: 5px;
             transition: transform 0.3s;
         }
-
         .interaction-btn:hover {
             transform: scale(1.1);
         }
-
         .interaction-container {
             display: flex;
             margin-bottom: 10px;
         }
-
         .comment {
             display: flex;
             align-items: center;
             border-top: 1px solid #eee;
             padding: 8px 0;
         }
-
         .comment-user-image {
             width: 30px;
             height: 30px;
             border-radius: 50%;
             margin-right: 10px;
         }
-
         .comment-content {
             display: flex;
             flex-direction: column;
         }
-
         .comment-author {
             font-weight: 600;
         }
-
         .comment-text {
             margin-left: 5px;
         }
-
         .comment-sec {
             height: 100%;
         }
-
         .posted-comments {
             height: 80%;
             overflow-y: scroll;
         }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
-
         .footer-content {
             display: flex;
             justify-content: space-around;
             align-items: start;
             flex-wrap: wrap;
         }
-
         .footer-section {
             margin: 10px;
         }
-
         .footer-section h3 {
             color: #f7f7f7;
         }
-
         .footer-section p,
         .footer-section ul,
         .footer-section a {
             color: #ddd;
             line-height: 1.6;
         }
-
         .footer-section ul {
             list-style-type: none;
             padding: 0;
         }
-
         .footer-section a {
             text-decoration: none;
             color: #ddd;
         }
-
         .footer-section a:hover {
             color: #fff;
             text-decoration: underline;
@@ -223,7 +187,6 @@
             const sendButton = document.querySelector('.send-btn');
             const commentInput = document.querySelector('.comment-box input');
             const commentsContainer = document.querySelector('.posted-comments');
-
             sendButton.addEventListener('click', () => {
                 const commentText = commentInput.value.trim();
                 if (commentText) {
@@ -231,7 +194,6 @@
                     commentInput.value = '';
                 }
             });
-
             function addComment(username, imagePath, text) {
                 const template = document.getElementById('comment-template');
                 const clone = template.content.cloneNode(true);
@@ -240,18 +202,14 @@
                 clone.querySelector('.comment-text').textContent = text;
                 commentsContainer.appendChild(clone);
             }
-
-
             const exampleComments = [
                 { username: 'fs445s', imagePath: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png', text: 'fr 🔥' },
                 { username: 'w8e0r', imagePath: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png', text: 'Broo 🔥🔥' },
                 { username: 'asi8d', imagePath: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png', text: 'True words never have been spoken...' },
                 { username: 'ucas23', imagePath: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png', text: 'LIGIT!' }
             ];
-
             exampleComments.forEach(comment => addComment(comment.username, comment.imagePath, comment.text));
         });
-
     </script>
 </head>
 <div class="header">
@@ -259,14 +217,12 @@
     <input type="text" placeholder="Search..." class="search-box">
     <a href="/settings"><img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="icon"></a>
 </div>
-
 <body>
     <div class="post-container">
         <div class="post-header">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="profile-image">
             <span class="username">Ahmed997</span>
         </div>
-
         <div class="post-body">
             <img src="https://pbs.twimg.com/media/DwFArA8XgAEDeff.jpg"
                 class="post-image">
@@ -329,5 +285,4 @@
         </div>
     </div>
 </footer>
-
 </html>
